@@ -124,12 +124,12 @@
 		width:185px;
 	}
 	#menu-topo{
-		display:inline-block;
-		float:left;
-		min-height:20px;
-		margin:40px 0 0 215px;
-		position:relative;
-		width:400px;
+		display: inline-block;
+		float: left;
+		margin: 40px 0 0 119px;
+		min-height: 20px;
+		position: relative;
+		width: 485px;
 	}
 	#menu-topo ul{
 		list-style-type:none;
@@ -147,6 +147,9 @@
 	}
 	#menu-topo ul li a:hover{
 		color:#FC0;
+	}
+	#menu-topo ul li	a.inscricoes{
+		color:#9C0;
 	}
 /* FIM - Estrutura - Topo */
 /* Estrutura - Banner */

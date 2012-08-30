@@ -11,7 +11,6 @@
 		echo $this->Html->css('style.home');
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
-		echo $this->fetch('script');
 		echo $this->Html->meta('keywords', 'maringa, web, webdesign');
 		echo $this->Html->meta('description', 'MaringaWeb - O maior encontro de Profissionais Web do Parana');
 	?>
@@ -43,5 +42,6 @@
 			<div id="rodape-texto">MaringáWeb - Todos os direitos reservados</div>
 		</div>
 	</div>
-</body>
+	<?=$this->Html->script(array('jquery','jquery.maskedinput', 'script'));?>
+</body>	
 </html>

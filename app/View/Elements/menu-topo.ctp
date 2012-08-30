@@ -4,5 +4,6 @@
 					<li><?=$this->Html->link('Sobre o Evento', '/sobre-o-evento')?></li>
 					<li><?=$this->Html->link("Localização", '/localizacao')?></li>
 					<li><?=$this->Html->link('Contato', '/contato')?></li>
+					<li><?=$this->Html->link('Inscrições', '/inscricao', array('class'=>'inscricoes'))?></li>
 				</ul>
 			</div>
