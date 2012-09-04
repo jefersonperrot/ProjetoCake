@@ -14,6 +14,7 @@
 		echo $this->Html->meta('keywords', 'maringa, web, webdesign');
 		echo $this->Html->meta('description', 'MaringaWeb - O maior encontro de Profissionais Web do Parana');
 	?>
+	<base href="<?=$this->Html->url('/')?>" />
 </head>
 <body class="projeto">
 	<div class="limitador">
@@ -42,6 +43,6 @@
 			<div id="rodape-texto">MaringáWeb - Todos os direitos reservados</div>
 		</div>
 	</div>
-	<?=$this->Html->script(array('jquery','jquery.maskedinput', 'script'));?>
+	<?=$this->Html->script(array('jquery', 'script_validade','jquery.maskedinput', 'script'));?>
 </body>	
 </html>

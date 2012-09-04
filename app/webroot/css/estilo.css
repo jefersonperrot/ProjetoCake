@@ -25,6 +25,7 @@
 /* FIM - Limites */
 /* Estilos de texto */
 	.negrito{font-weight:bold;}
+	.italico{font-style:italic;}
 	.sublinhado{text-decoration:underline;}
 	.capitalizado{
 		display:inline-block;
@@ -33,6 +34,14 @@
 		margin:-7px 0 0 0;
 		text-transform:capitalize; 
 	}
+	.fonte11{font-size:11px};
+	.fonte12{font-size:12px};
+	.fonte14{font-size:14px};
+	.fonte18{font-size:18px};
+
+
+
+	.laranja{color:#F60;}
 /* FIM - Estilos de texto */
 /* Estrutura - Topo */
 	#topo {
@@ -315,3 +324,33 @@
 	}
 	
 /* FIM - Estrutura Contato*/
+/* */
+
+	.lista-palestra{
+		margin:0 auto;
+		min-height:150px;
+		overflow:hidden;
+		padding:15px 0 15px 0;
+		width:960px;
+		font-size:14px;
+		color:#666;
+	}
+	.lista-palestra ul{
+		list-style-type:none;
+	}
+	.lista-palestra ul li{
+		width:938px;
+		min-height:30px;
+		overflow:hidden;
+		margin:0 0 15px 0;
+		border:1px dashed #999;
+		display:block;
+		background:#EEE;
+		text-align:center;
+		padding:15px 10px 10px 10px;
+	}
+	
+	.lista-palestra a{
+		text-decoration:underline;
+		color:#000;
+	}

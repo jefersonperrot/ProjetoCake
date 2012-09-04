@@ -1,11 +1,12 @@
 <?php
 class InscricoesController extends AppController {
-
-	public $uses = array('Inscricao');
+	public $uses = array('Inscricao', 'Cidade', 'Estado');
 	
 	//Action da Inscrição
 	public function index() {
 		
+		$this->set('cidades', array('0'=>'Selecione um estado'));
+		$this->set('estados', $this->Cidade->Estado->find('list'));
 		$this->render('inscricao');
 	
 	}
@@ -13,7 +14,7 @@ class InscricoesController extends AppController {
 	public function inscricao() {
 		
 		$isPost = $this->request->isPost();
-		
+
 		if ($isPost && !empty($this->request->data['Inscricoes'])) {
 		
 		  // Tenta salvar os dados da inscrição
@@ -21,7 +22,8 @@ class InscricoesController extends AppController {
 				
 				// Registro inserido com sucesso!
 				$this->render('inscricao_realizada');
-		   }
+				
+		   } 
 		   
 		} 
 		
