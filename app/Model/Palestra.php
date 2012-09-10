@@ -6,19 +6,19 @@ class Palestra extends AppModel {
 	public $useTable = 'palestras';
 	
 	public $validate = array(
-		//Validação do nome
 		'nome' => array(
 			'rule' => 'notEmpty',
 			'message' => 'O campo deve ser preenchido'
 		),
 		'inicio' => array(
-			'rule'    => array('datetime', 'dmy'),
+			'rule'    => array('time', 'hh:mm'),
 			'message' => 'Preencha com uma data válida'
 		),
 		'fim' => array(
-			'rule'    => array('datetime', 'dmy'),
+			'rule'    => array('time'),
 			'message' => 'Preencha com uma data válida'
 		)		
+				
 	);
 	
 }

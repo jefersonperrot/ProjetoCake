@@ -7,21 +7,24 @@
 	</div>
 	<div class="conteudo-formulario">
 		<div class="cont-esq">
-			<?=$this->Form->create('CadastroPalestra', array('controller'=>'PalestrasController', 'action' => 'CadastrarPalestra')) ?>
+			<?=$this->Form->create('Palestra', array('controller'=>'PalestrasController', 'action' => 'CadastrarPalestra')) ?>
 			<div class="label-form">
-			<?=$this->Form->input('palestrante_id', array('options'=>array($palestrante), 'label'=>'Palestrante'))?>
+			<?=$this->Form->input('palestrante_id', array('options'=>array($palestrante), 'label'=>'Palestrante', 'empty'=>'Selecione um palestrante'))?>
 			</div>
 			<div class="label-form">
-			<?=$this->Form->input('nome', array('label'=>'Nome'))?>
+			<?=$this->Form->input('nome', array('div'=>array('class'=>'input text')))?>
 			</div>
 			<div class="label-form">
 			<?=$this->Form->input('descricao', array('label'=>'Descrição', 'type'=>'textarea'))?>
 			</div>
 			<div class="label-form">
-			<?=$this->Form->input('inicio', array('label'=>'Início'))?>
+			<?=$this->Form->input('data', array('label'=>'Data', 'style'=>'width:20%'))?>
 			</div>
 			<div class="label-form">
-			<?=$this->Form->input('Fim', array('label'=>'Fim'))?>
+			<?=$this->Form->input('inicio', array('label'=>'Início', 'style'=>'width:20%'))?>
+			</div>
+			<div class="label-form">
+			<?=$this->Form->input('fim', array('label'=>'Fim', 'style'=>'width:20%'))?>
 			</div>
 			<div class="label-form">
 			<?=$this->Form->submit('Cadastrar') ?>

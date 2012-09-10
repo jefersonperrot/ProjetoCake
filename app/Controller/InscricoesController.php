@@ -2,12 +2,14 @@
 class InscricoesController extends AppController {
 	public $uses = array('Inscricao', 'Cidade', 'Estado');
 	
+	public $scaffold;
+	
 	//Action da Inscrição
 	public function index() {
 		
-		$this->set('cidades', array('0'=>'Selecione um estado'));
-		$this->set('estados', $this->Cidade->Estado->find('list'));
-		$this->render('inscricao');
+		// $this->set('cidades', array('0'=>'Selecione um estado'));
+		// $this->set('estados', $this->Cidade->Estado->find('list'));
+		// $this->render('inscricao');
 	
 	}
 	
@@ -25,8 +27,12 @@ class InscricoesController extends AppController {
 				
 		   } 
 		   
-		} 
+		} else {
+
+			$this->set('cidades', array('0'=>'Selecione um estado'));
+			$this->set('estados', $this->Cidade->Estado->find('list'));
+			$this->render('inscricao');
 		
-		
+		}	
 	}
 }
