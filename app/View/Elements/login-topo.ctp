@@ -1,0 +1,1 @@
+<div id="login-topo">Bem vindo <span class="negrito"><?=$nomeVisitante?></span>. <span class="negrito sublinhado">Acesse sua conta</span> ou <span class="negrito sublinhado">Cadastre-se</span> para adquirir seu ingresso.</div>
