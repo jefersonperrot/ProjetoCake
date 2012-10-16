@@ -20,7 +20,7 @@
 	<div class="limitador">
 		<div id="topo">
 			<div id="bts-topo">
-				<a href="#" class="bt-fav"></a>
+				<?=$this->Html->link('', '/painel/usuarios/login', array('class'=>'bt-fav'))?>
 				<?=$this->Html->link('', '/contato', array('class'=>'bt-contato'))?>
 				<a href="#" class="bt-rss"></a>
 				<a href="#" class="bt-ajuda"></a>
@@ -43,8 +43,7 @@
 			<div id="rodape-texto">MaringáWeb - Todos os direitos reservados</div>
 		</div>
 	</div>
-	<?//=$this->Html->script(array('jquery', 'script_validade','jquery.maskedinput', 'script'));?>
-	<?=$this->Html->script(array('jquery'));?>
+	<?=$this->Html->script(array('jquery', 'script_validade','jquery.maskedinput', 'script'));?>
 	<script>
 		$("#flashMessage").delay(3000).slideUp(600);
 	</script>

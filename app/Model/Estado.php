@@ -2,8 +2,8 @@
 
 	class Estado extends AppModel {
 	
-		var $displayField = 'nome';
-		var $hasMany = 'Cidade';
+		public $displayField = 'nome';
+		public $hasMany = 'Cidade';
 	}
 
 ?>

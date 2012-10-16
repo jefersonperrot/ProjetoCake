@@ -4,22 +4,22 @@ class PalestrasController extends AppController {
 	public $uses = array('Palestra', 'Palestrante');
 	public $helpers = array ('Html','Form');
 	
-	public $scaffold;
+	public $scaffold = 'painel';
 	
 	//Listagem das Palestras
-	// public function index() {
+	public function index() {
 		
-		// $params = array(
-			// 'order' => array('Palestra.inicio ASC')
-		// );
+		$params = array(
+			'order' => array('Palestra.inicio ASC')
+		);
 		
-		// $listagem = $this->Palestra->find('all', $params);
-		// $this->set('listagem', $listagem);
+		$listagem = $this->Palestra->find('all', $params);
+		$this->set('listagem', $listagem);
 		
 		
-		// $this->render('index');
+		$this->render('index');
 	
-	// }
+	}
 	
 	public function CadastrarPalestra() {
 		

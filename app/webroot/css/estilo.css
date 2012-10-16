@@ -355,11 +355,6 @@
 		color:#000;
 	}
 
-	.error-message {
-	color: #FF0000;
-	float: left;
-	padding:3px 0 0 10px;
-}
 #flashMessage{background-color:#000; background-repeat:repeat-x; color:#FFF; font-family:Verdana, Geneva, sans-serif; font-size:20px; height:54px; padding-top:16px; position:fixed; text-align:center; top:0px; left:0px;	width:100%; z-index:9999}
 #flashMessage span{background-image:url(../../img/site/sprite-mensagem.png); background-repeat:no-repeat;	margin-right:10px}
 #flashMessage span.erro{background-position:-5px 3px; padding:0px 10px 0px 10px}
@@ -372,16 +367,12 @@
 
 /* Form errors */
 form .error {
-	background: #FFDACC;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
 	border-radius: 4px;
 	font-weight: normal;
 }
-form .error-message {
-	float:right;
-}
-/*
+
 form .error-message {
 	-moz-border-radius: none;
 	-webkit-border-radius: none;
@@ -389,12 +380,12 @@ form .error-message {
 	border: none;
 	background: none;
 	margin: 0;
-	padding-left: 4px;
+	padding-left: 0px;
 	padding-right: 0;
+	color: #9E2424;
 }
 form .error,
 form .error-message {
-	color: #9E2424;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	-ms-box-shadow: none;
@@ -402,7 +393,7 @@ form .error-message {
 	box-shadow: none;
 	text-shadow: none;
 }
-*/
+
 form .required {
 	font-weight: bold;
 }
