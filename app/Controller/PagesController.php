@@ -37,8 +37,6 @@ class PagesController extends AppController {
  * @var string
  */
 	public $name = 'Pages';
-	
-	public $scaffold = 'painel';
 
 /**
  * This controller does not use a model

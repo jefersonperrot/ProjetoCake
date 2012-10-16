@@ -737,21 +737,3 @@ pre {
 #url-rewriting-warning {
 	display:none;
 }
-
-/* */
-ul.novoLayout {
-	list-style-type:none;
-	line-height:40px;
-	margin:0 0 5px 0;
-	margin-top:-5px;
-}
-ul.novoLayout li{
-	float:left;
-	padding:0 3px 0 3px;
-}
-ul.novoLayout li a{
-	color:#FFF;
-}
-ul.novoLayout li a:hover{
-	color:#DDDDDD;
-}

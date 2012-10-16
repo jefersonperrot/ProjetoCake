@@ -12,7 +12,7 @@ function aviso(msg, secs){
 $(document).ready(function () {
 
 	//funcoes do capeta que nao funcionam nem a pau e travam tudo 
-    // InitMisc ();
+    InitMisc ();
     // InitEvents ();
     // InitBoxSlide ();
 	// InitGraphs ();
@@ -132,7 +132,7 @@ function listarCidades(){
 }
 
 function InitSelectEstadoCidade(){
-// alert('acascsa');
+//alert('acascsa');
 	$('#slt-estado').change(function(){
 		listarCidades();
 	});

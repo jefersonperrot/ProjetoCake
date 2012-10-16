@@ -3,7 +3,7 @@ class PalestrantesController extends AppController {
 
 	public $uses = array('Palestrante');
 	
-	public $scaffold = 'painel';
+	public $scaffold;
 	
 	//Listagem das Palestras
 	public function index() {
