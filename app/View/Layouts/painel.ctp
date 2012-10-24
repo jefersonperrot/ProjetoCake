@@ -1,52 +1,69 @@
+<?php
+/**
+ *
+ * PHP 5
+ *
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
+ * @package       Cake.View.Layouts
+ * @since         CakePHP(tm) v 0.10.0.1076
+ * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ */
+
+$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="pt-br">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<?php echo $this->Html->charset('utf-8'); ?>
+	<?php echo $this->Html->charset(); ?>
 	<title>
+		<?php echo $cakeDescription ?>:
 		<?php echo $title_for_layout; ?>
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
-		echo $this->Html->css('estilo');
-		echo $this->Html->css('style.home');
+
+		echo $this->Html->css('cake.generic');
+
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
-		echo $this->Html->meta('keywords', 'maringa, web, webdesign');
-		echo $this->Html->meta('description', 'MaringaWeb - O maior encontro de Profissionais Web do Parana');
+		echo $this->fetch('script');
 	?>
-	<base href="<?=$this->Html->url('/')?>" />
 </head>
-<body class="projeto">
-	<div class="limitador">
-		<div id="topo">
-			<div id="bts-topo">
-				<a href="#" class="bt-fav"></a>
-				<?=$this->Html->link('', '/contato', array('class'=>'bt-contato'))?>
-				<a href="#" class="bt-rss"></a>
-				<a href="#" class="bt-ajuda"></a>
-			</div>
-			<?=$this->element('login-topo', array('nomeVisitante'=>'Visitante', 'cache' => true))?>
+<body>
+	<div id="container">
+		<div id="header">
+			<ul class="novoLayout">
+				<li><?=$this->Html->link('Cadastrar Palestra', '/painel/palestras/add')?></li>
+				<li><?=$this->Html->link('Listar Palestra', '/painel/palestras/index')?></li>
+				<li><?=$this->Html->link('Cadastrar Palestrante', '/painel/palestrantes/add')?></li>
+				<li><?=$this->Html->link('Listar Palestrante', '/painel/palestrantes/index')?></li>
+				<li><?=$this->Html->link('Cadastrar Inscrição', '/painel/inscricoes/add')?></li>
+				<li><?=$this->Html->link('Listar Inscrição', '/painel/inscricoes/index')?></li> 
+				<li><?=$this->Html->link('Logout', '/painel/usuarios/logout')?></li> 
+			</ul>
 		</div>
-		<div id="dobra-topo"></div>
-		<?=$this->element('topo-logo', array('nomeVisitante'=>'Visitante', 'cache' => true))?>
-		<div id="banner-full">
-			<div id="banner-imagem"><?=$this->Html->image('projeto/banner.png', array('title'=>'Imagem Banner', 'title'=>'MaringáWeb'))?></div>
-		</div>
-		<div id="dobra-banner"></div>
-		<div id="conteudo">
+		<div id="content">
+
 			<?php echo $this->Session->flash(); ?>
+
 			<?php echo $this->fetch('content'); ?>
 		</div>
-		<div id="dobra-rodape"></div>
-		<div id="rodape">
-			<div id="logo-rodape"><?=$this->Html->link('', '/')?></div>
-			<div id="rodape-texto">MaringáWeb - Todos os direitos reservados</div>
+		<div id="footer">
+			<?php echo $this->Html->link(
+					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
+					'http://www.cakephp.org/',
+					array('target' => '_blank', 'escape' => false)
+				);
+			?>
 		</div>
 	</div>
-	<?=$this->Html->script(array('jquery', 'script_validade','jquery.maskedinput', 'script'));?>
-	<script>
-		$("#flashMessage").delay(3000).slideUp(600);
-	</script>
-	
-</body>	
+	<?php echo $this->element('sql_dump'); ?>
+</body>
 </html>
